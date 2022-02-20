@@ -16,6 +16,13 @@ exports.config = {
   include: {
     I: './steps_file.ts'
   },
+  plugins: {
+    testomatio: {
+      enabled: true,
+      require: '@testomatio/reporter/lib/adapter/codecept',
+      apiKey: process.env.TESTOMATIO,
+    }
+  },
   bootstrap: null,
   mocha: {},
   name: 'oneList'
