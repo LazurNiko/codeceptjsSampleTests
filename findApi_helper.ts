@@ -18,8 +18,8 @@ class ListApi extends Helper {
             for (let item of atags) {
             url.push(item.href);
           }
-          const newObject = [...name]
-        return Object.assign(newObject.map((n, i) => ({ [n]: url[i] })));
+
+        return Object.assign(name.map((n, i) => ({ [n]: url[i] })));
       })
     console.log('Backend/Api list :', JSON.stringify(backendApi));
     await page.waitForTimeout(5000);
@@ -45,8 +45,8 @@ async getNodeElement() {
               urlApi.push(item.href);
             }
         }
-        const newObject = [...nameApi]
-      return Object.assign(newObject.map((n, i) => ({ [n]: urlApi[i] })));
+       
+      return Object.assign(nameApi.map((n, i) => ({ [n]: urlApi[i] })));
     })
   console.log('nodeApi item :', JSON.stringify(nodeApi));
   await page.waitForTimeout(5000);
