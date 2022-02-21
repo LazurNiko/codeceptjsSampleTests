@@ -1,6 +1,6 @@
 /// <reference types='codeceptjs' />
 type steps_file = typeof import('./steps_file');
-type listApi = import('./listapi_helper');
+type listApi = typeof import('./findApi_helper');
 
 declare namespace CodeceptJS {
   interface SupportObject { I: I, current: any }

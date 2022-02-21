@@ -10,7 +10,7 @@ exports.config = {
       browser: 'chromium'
     },
     listApi: {
-      require: "./listapi_helper.ts"
+      require: "./findApi_helper.ts"
     }
   },
   include: {
