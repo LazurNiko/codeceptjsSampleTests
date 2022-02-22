@@ -11,7 +11,10 @@ exports.config = {
     },
     listApi: {
       require: "./findApi_helper.ts"
-    }
+    },
+    GetHeaderList: {
+      require: "./getHeaderList_helper.ts"
+    },
   },
   include: {
     I: './steps_file.ts'
