@@ -20,7 +20,7 @@ class GetHeaderList extends Helper {
       
 //     }
 
-    async getHeaderList() {
+    async getQuickstartHeaderList() {
       const { page } = this.helpers.Playwright;
       await page.goto('https://auth0.com/docs/quickstarts')
       await page.waitForSelector('//*[@id="app"]/div[1]/header/div/div[2]/div');
@@ -38,7 +38,7 @@ class GetHeaderList extends Helper {
   
           return Object.assign(name.map((n, i) => ({ [n]: url[i] })));
         })
-      console.log('Header list :', JSON.stringify(headerList));
+      console.log('Quickstarts Header list :', JSON.stringify(headerList));
       await page.waitForTimeout(5000);
   }
   
